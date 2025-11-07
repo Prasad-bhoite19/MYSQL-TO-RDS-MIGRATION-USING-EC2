@@ -72,7 +72,7 @@ INSERT INTO students VALUES;
 EXIT;
 
 Step 2 — Export the Local MySQL Database
-mysqldump -u root -p studentdb > mydb.sql
+sudo mysqldump -u root -p studentdb > mydb.sql
 🧾 This command exports your database into a .sql file for migration.
 
 Step 3 — Create an RDS Database
