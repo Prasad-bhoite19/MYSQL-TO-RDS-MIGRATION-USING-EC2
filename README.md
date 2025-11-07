@@ -20,10 +20,9 @@ It covers everything from RDS setup, security configuration, export/import comma
 ## 🧩 Architecture
 
 +--------------------+ +---------------------------+
-
 | EC2 Instance | ---> | Amazon RDS (MySQL) |
-| MySQL Installed | | Managed Database Service |
 
+| MySQL Installed | | Managed Database Service |
 +--------------------+ +---------------------------+
 
 ---
