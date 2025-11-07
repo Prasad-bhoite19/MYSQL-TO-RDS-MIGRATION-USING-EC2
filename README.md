@@ -134,7 +134,7 @@ MYSQL-TO-RDS-MIGRATION-USING-EC2/
 │
 ├── mydb.sql               # Exported database file
 ├── README.md              # Project documentation
-└── screenshots/           # (Optional) Add setup screenshots
+└── Images/           # (Optional) Add setup screenshots
 
 📸 Recommended Screenshot Ideas
 📍 RDS creation page
