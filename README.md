@@ -20,8 +20,10 @@ It covers everything from RDS setup, security configuration, export/import comma
 ## 🧩 Architecture
 
 +--------------------+ +---------------------------+
+
 | EC2 Instance | ---> | Amazon RDS (MySQL) |
 | MySQL Installed | | Managed Database Service |
+
 +--------------------+ +---------------------------+
 
 ---
@@ -67,45 +69,30 @@ CREATE TABLE students (
 
 INSERT INTO students VALUES;
 EXIT;
-Step 2 — Export the Local MySQL Database
 
+Step 2 — Export the Local MySQL Database
 mysqldump -u root -p studentdb > mydb.sql
 🧾 This command exports your database into a .sql file for migration.
 
 Step 3 — Create an RDS Database
 Go to AWS Console → RDS → Create database
-
 Choose Standard Create
-
 Engine: MySQL
-
 Template: Free Tier
-
 DB Identifier: myrdsdb
-
 Master username: admin
-
 Master password: (create a secure password)
-
 Instance class: db.t3.micro
-
 Public access: ✅ Yes (for demo)
-
 Port: 3306
-
 Click Create Database and wait until status is Available ✅
 
 Step 4 — Configure RDS Security Group
 Go to EC2 → Security Groups
-
 Find the RDS security group
-
 Edit Inbound Rules → Add Rule:
-
 Type: MySQL/Aurora
-
 Port: 3306
-
 Source: Your EC2’s security group (recommended)
 
 Step 5 — Connect EC2 to RDS
@@ -121,17 +108,17 @@ mysql -h myrdsdb.cno4usiwkkw0.ap-south-1.rds.amazonaws.com -u admin -p
 
 Step 6 — Create Target Database in RDS
 Once connected to RDS MySQL:
-
 CREATE DATABASE studentdb;
 EXIT;
+
 Step 7 — Import SQL File from EC2 to RDS
-
 mysql -h <rds-endpoint> -u admin -p studentdb < mydb.sql
-Step 8 — Verify Data Migration
 
+Step 8 — Verify Data Migration
 mysql -h <rds-endpoint> -u admin -p
 USE studentdb;
 SELECT * FROM students;
+
 ✅ You should now see your table and data successfully migrated from EC2 to RDS!
 
 🧠 Common Issues & Fixes
@@ -162,11 +149,9 @@ MYSQL-TO-RDS-MIGRATION-USING-EC2/
 ✅ Imported SQL file to RDS successfully
 
 💡 Key Learning
-Understanding AWS RDS connectivity
-
-Using mysqldump for database migration
-
-Setting up secure VPC communication between EC2 and RDS
+Understanding AWS RDS connectivity.
+Using mysqldump for database migration.
+Setting up secure VPC communication between EC2 and RDS.
 
 ✨ Author
 👨‍💻 Prasad
