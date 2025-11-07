@@ -158,4 +158,4 @@ Setting up secure VPC communication between EC2 and RDS.
 👨‍💻 Prasad
 💼 Cloud & DevOps Enthusiast
 
-**LinkedIn:** [linkedin.com/in/prasad-bhoite-a38a64223](#)
+**LinkedIn:**  [linkedin.com/in/prasad-bhoite-a38a64223]
