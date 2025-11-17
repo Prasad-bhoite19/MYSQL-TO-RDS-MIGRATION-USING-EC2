@@ -83,28 +83,28 @@ sudo mysqldump -u root -p studentdb > mydb.sql
 🧾 This command exports your database into a .sql file for migration.
 ~~~
 ## **Step 3 — Create an RDS Database**
-~~~
-Go to AWS Console → RDS → Create database
-Choose Standard Create
-Engine: MySQL
-Template: Free Tier
-DB Identifier: myrdsdb
-Master username: admin
-Master password: (create a secure password)
-Instance class: db.t3.micro
-Public access: ✅ Yes (for demo)
-Port: 3306
-Click Create Database and wait until status is Available ✅
-~~~
+
+◆ Go to AWS Console → RDS → Create database
+◆ Choose Standard Create
+◆ Engine: MySQL
+◆ Template: Free Tier
+◆ DB Identifier: myrdsdb
+◆ Master username: admin
+◆ Master password: (create a secure password)
+◆ Instance class: db.t3.micro
+◆ Public access: ✅ Yes (for demo)
+◆ Port: 3306
+◆ Click Create Database and wait until status is Available ✅
+
 ## **Step 4 — Configure RDS Security Group**
-~~~
-Go to EC2 → Security Groups
-Find the RDS security group
-Edit Inbound Rules → Add Rule:
-Type: MySQL/Aurora
-Port: 3306
-Source: Your EC2’s security group (recommended)
-~~~
+
+◆ Go to EC2 → Security Groups
+◆ Find the RDS security group
+◆ Edit Inbound Rules → Add Rule:
+◆ Type: MySQL/Aurora
+◆ Port: 3306
+◆ Source: Your EC2’s security group (recommended)
+
 ## **Step 5 — Connect EC2 to RDS**
 Install MySQL client on EC2 (if not already installed):
 ~~~
@@ -161,6 +161,7 @@ MYSQL-TO-RDS-MIGRATION-USING-EC2/
 📍 SELECT * FROM students; output
 
 ## 🧾 Summary
+
 ✅ Created MySQL DB on EC2
 
 ✅ Exported local database using mysqldump
@@ -172,11 +173,12 @@ MYSQL-TO-RDS-MIGRATION-USING-EC2/
 ✅ Imported SQL file to RDS successfully
 
 ## 💡 Key Learning
-Understanding AWS RDS connectivity.
 
-Using mysqldump for database migration.
+◆ Understanding AWS RDS connectivity.
 
-Setting up secure VPC communication between EC2 and RDS.
+◆ Using mysqldump for database migration.
+
+◆ Setting up secure VPC communication between EC2 and RDS.
  ```
 ## 🌐 Connect with Me
 
