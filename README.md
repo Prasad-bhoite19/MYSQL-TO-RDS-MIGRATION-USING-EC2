@@ -82,7 +82,7 @@ sudo mysqldump -u root -p studentdb > mydb.sql
 
 🧾 This command exports your database into a .sql file for migration.
 ~~~
-**Step 3 — Create an RDS Database**
+## **Step 3 — Create an RDS Database**
 ~~~
 Go to AWS Console → RDS → Create database
 Choose Standard Create
@@ -96,7 +96,7 @@ Public access: ✅ Yes (for demo)
 Port: 3306
 Click Create Database and wait until status is Available ✅
 ~~~
-**Step 4 — Configure RDS Security Group**
+## **Step 4 — Configure RDS Security Group**
 ~~~
 Go to EC2 → Security Groups
 Find the RDS security group
@@ -105,7 +105,7 @@ Type: MySQL/Aurora
 Port: 3306
 Source: Your EC2’s security group (recommended)
 ~~~
-**Step 5 — Connect EC2 to RDS**
+## **Step 5 — Connect EC2 to RDS**
 Install MySQL client on EC2 (if not already installed):
 ~~~
 sudo apt update
@@ -117,17 +117,17 @@ mysql -h <rds-endpoint> -u admin -p
 Example:
 mysql -h myrdsdb.cno4usiwkkw0.ap-south-1.rds.amazonaws.com -u admin -p
 ~~~
-**Step 6 — Create Target Database in RDS**
+## **Step 6 — Create Target Database in RDS**
 ~~~
 Once connected to RDS MySQL:
 CREATE DATABASE studentdb;
 EXIT;
 ~~~
-**step 7 — Import SQL File from EC2 to RDS**
+## **step 7 — Import SQL File from EC2 to RDS**
 ~~~
 mysql -h <rds-endpoint> -u admin -p studentdb < mydb.sql
 ~~~
-**Step 8 — Verify Data Migration**
+## **Step 8 — Verify Data Migration**
 ~~~
 mysql -h <rds-endpoint> -u admin -p
 USE studentdb;
