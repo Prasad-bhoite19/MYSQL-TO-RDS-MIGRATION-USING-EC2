@@ -42,7 +42,7 @@ It covers everything from RDS setup, security configuration, export/import comma
 
 ## 🚀 Step-by-Step Setup
 
-**Step 1 — Launch EC2 Instance**
+## **Step 1 — Launch EC2 Instance**
 
 
 **Update packages**
@@ -75,7 +75,7 @@ INSERT INTO students VALUES;
 EXIT;
 ~~~
 
-**Step 2 — Export the Local MySQL Database**
+## **Step 2 — Export the Local MySQL Database**
 ~~~
 
 sudo mysqldump -u root -p studentdb > mydb.sql
@@ -123,7 +123,7 @@ Once connected to RDS MySQL:
 CREATE DATABASE studentdb;
 EXIT;
 ~~~
-**7 — Import SQL File from EC2 to RDS**
+**step 7 — Import SQL File from EC2 to RDS**
 ~~~
 mysql -h <rds-endpoint> -u admin -p studentdb < mydb.sql
 ~~~
