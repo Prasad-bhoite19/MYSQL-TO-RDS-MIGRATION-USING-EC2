@@ -160,13 +160,17 @@ SELECT * FROM students;
 ⚙️ Import error	Database doesn’t exist	Create database before import
 
 ## 📁 Folder Structure
-
+~~~
 MYSQL-TO-RDS-MIGRATION-USING-EC2/
-│
-├── mydb.sql               # Exported database file
-├── README.md              # Project documentation
-└── Images/           # (Optional) Add setup screenshots
 
+│
+
+├── mydb.sql               # Exported database file
+
+├── README.md              # Project documentation
+
+└── Images/           # (Optional) Add setup screenshots
+~~~
 ## 📸 Recommended Screenshot Ideas
 
 📍 RDS creation page
@@ -196,7 +200,7 @@ MYSQL-TO-RDS-MIGRATION-USING-EC2/
 ◆ Using mysqldump for database migration.
 
 ◆ Setting up secure VPC communication between EC2 and RDS.
- ```
+
 ## 🌐 Connect with Me
 
 👨‍💻 **Prasad**  
