@@ -42,14 +42,14 @@ It covers everything from RDS setup, security configuration, export/import comma
 
 ## 🚀 Step-by-Step Setup
 
-### **Step 1 — Launch EC2 Instance**
+**Step 1 — Launch EC2 Instance**
 
 
-# Update packages
+**Update packages**
 ~~~
 sudo apt update -y
 ~~~
-# Install MySQL server
+**Install MySQL server**
 ~~~
 sudo apt install mysql-server -y
 ~~~
