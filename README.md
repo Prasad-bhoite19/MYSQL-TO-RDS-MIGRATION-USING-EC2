@@ -85,24 +85,39 @@ sudo mysqldump -u root -p studentdb > mydb.sql
 ## **Step 3 — Create an RDS Database**
 
 ◆ Go to AWS Console → RDS → Create database
+
 ◆ Choose Standard Create
+
 ◆ Engine: MySQL
+
 ◆ Template: Free Tier
+
 ◆ DB Identifier: myrdsdb
+
 ◆ Master username: admin
+
 ◆ Master password: (create a secure password)
+
 ◆ Instance class: db.t3.micro
+
 ◆ Public access: ✅ Yes (for demo)
+
 ◆ Port: 3306
+
 ◆ Click Create Database and wait until status is Available ✅
 
 ## **Step 4 — Configure RDS Security Group**
 
 ◆ Go to EC2 → Security Groups
+
 ◆ Find the RDS security group
+
 ◆ Edit Inbound Rules → Add Rule:
+
 ◆ Type: MySQL/Aurora
+
 ◆ Port: 3306
+
 ◆ Source: Your EC2’s security group (recommended)
 
 ## **Step 5 — Connect EC2 to RDS**
@@ -139,7 +154,9 @@ SELECT * FROM students;
 ## 🧠 Common Issues & Fixes
 
 ❌ Access denied	Wrong username/password	Use correct RDS admin credentials
+
 🔒 Timeout	Security group not allowing port 3306	Edit inbound rules to allow EC2 SG
+
 ⚙️ Import error	Database doesn’t exist	Create database before import
 
 ## 📁 Folder Structure
