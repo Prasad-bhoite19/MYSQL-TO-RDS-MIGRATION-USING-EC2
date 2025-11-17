@@ -106,7 +106,7 @@ sudo mysqldump -u root -p studentdb > mydb.sql
 
 ◆ Click Create Database and wait until status is Available ✅
 
-## **Step 4 — Configure RDS Security Group**
+## **📌 Step 4 — Configure RDS Security Group**
 
 ◆ Go to EC2 → Security Groups
 
